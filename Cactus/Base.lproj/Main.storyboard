@@ -74,6 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="cactusImageView" destination="G51-KZ-9t2" id="Ypx-sU-NJp"/>
+                        <outlet property="plantButton" destination="o51-qp-dW5" id="8h3-iu-Iu9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
