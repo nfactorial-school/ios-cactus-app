@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3D92C224D02F4100109169 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92C124D02F4100109169 /* BreakViewController.swift */; };
 		AF3E08B624CFD05C0018905C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E08B524CFD05B0018905C /* AppDelegate.swift */; };
 		AF3E08BA24CFD05C0018905C /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E08B924CFD05C0018905C /* SessionViewController.swift */; };
 		AF3E08BD24CFD05C0018905C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3E08BB24CFD05C0018905C /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3D92C124D02F4100109169 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		AF3E08B224CFD05B0018905C /* Cactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3E08B524CFD05B0018905C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3E08B924CFD05C0018905C /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				AF3E08B524CFD05B0018905C /* AppDelegate.swift */,
+				AF3E08C924CFE72A0018905C /* OnboardingViewController.swift */,
 				AF3E08B924CFD05C0018905C /* SessionViewController.swift */,
+				AF3D92C124D02F4100109169 /* BreakViewController.swift */,
 				AF3E08BB24CFD05C0018905C /* Main.storyboard */,
 				AF3E08BE24CFD05E0018905C /* Assets.xcassets */,
 				AF3E08C024CFD05E0018905C /* LaunchScreen.storyboard */,
 				AF3E08C324CFD05E0018905C /* Info.plist */,
-				AF3E08C924CFE72A0018905C /* OnboardingViewController.swift */,
 			);
 			path = Cactus;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3D92C224D02F4100109169 /* BreakViewController.swift in Sources */,
 				AF3E08BA24CFD05C0018905C /* SessionViewController.swift in Sources */,
 				AF3E08CA24CFE72A0018905C /* OnboardingViewController.swift in Sources */,
 				AF3E08B624CFD05C0018905C /* AppDelegate.swift in Sources */,

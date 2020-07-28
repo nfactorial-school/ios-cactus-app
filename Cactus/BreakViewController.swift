@@ -1,5 +1,5 @@
 //
-//  SessionViewController.swift
+//  BreakViewController.swift
 //  Cactus
 //
 //  Created by Тимур Табынбаев on 7/28/20.
@@ -8,23 +8,25 @@
 
 import UIKit
 
-class SessionViewController: UIViewController {
+class BreakViewController: UIViewController {
     @IBOutlet var cactusImageView: UIImageView!
-    @IBOutlet var plantButton: UIButton!
-
+    @IBOutlet var takeABreakButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         cactusImageView.layer.cornerRadius = cactusImageView.frame.width / 2
         cactusImageView.layer.masksToBounds = true
         
-        plantButton.layer.cornerRadius = 14
-        plantButton.layer.masksToBounds = true
+        takeABreakButton.layer.cornerRadius = 14
+        takeABreakButton.layer.masksToBounds = true
     }
     
-    @IBAction func didTapPlantButton() {
-        // temp
-        performSegue(withIdentifier: "showBreak", sender: nil)
+    @IBAction func didTapCloseButton() {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapTakeABreakButton() {
+        print("start break")
     }
 }
-
