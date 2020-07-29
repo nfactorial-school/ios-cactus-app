@@ -9,6 +9,8 @@
 import UIKit
 
 class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, SessionManagerDelegate {
+    @IBOutlet var topLabel: UILabel!
+
     @IBOutlet var cactusImageView: UIImageView!
     
     @IBOutlet var plantButton: UIButton!
@@ -86,6 +88,7 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func sessionDidEnd(session: Session) {
+        topLabel.text = "You've planted a cactus!"
         performSegue(withIdentifier: "showBreak", sender: nil)
         
         pickerView.isHidden = false

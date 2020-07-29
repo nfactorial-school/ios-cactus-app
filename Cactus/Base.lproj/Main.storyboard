@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start planting today!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMj-qS-Vdz">
-                                <rect key="frame" x="29" y="74" width="156" height="21"/>
+                                <rect key="frame" x="29" y="74" width="350" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.19215686274509802" green="0.1764705882352941" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,6 +125,7 @@
                         <outlet property="giveUpButton" destination="Cra-2F-mqL" id="Eoc-Uy-NU5"/>
                         <outlet property="pickerView" destination="zNS-31-Afi" id="tFj-N3-FLN"/>
                         <outlet property="plantButton" destination="o51-qp-dW5" id="8h3-iu-Iu9"/>
+                        <outlet property="topLabel" destination="AMj-qS-Vdz" id="J8v-iG-CfU"/>
                         <segue destination="H1l-9c-62J" kind="presentation" identifier="showBreak" id="VNK-Sx-gdL"/>
                     </connections>
                 </viewController>
