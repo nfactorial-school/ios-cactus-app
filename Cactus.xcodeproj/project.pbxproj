@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AF3D92C224D02F4100109169 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92C124D02F4100109169 /* BreakViewController.swift */; };
+		AF3D92CA24D128B100109169 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92C924D128B100109169 /* Session.swift */; };
+		AF3D92CC24D128EA00109169 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92CB24D128EA00109169 /* SessionManager.swift */; };
+		AF3D92CE24D1291100109169 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92CD24D1291100109169 /* CountdownTimer.swift */; };
 		AF3E08B624CFD05C0018905C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E08B524CFD05B0018905C /* AppDelegate.swift */; };
 		AF3E08BA24CFD05C0018905C /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3E08B924CFD05C0018905C /* SessionViewController.swift */; };
 		AF3E08BD24CFD05C0018905C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3E08BB24CFD05C0018905C /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		AF3D92C124D02F4100109169 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
+		AF3D92C924D128B100109169 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		AF3D92CB24D128EA00109169 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		AF3D92CD24D1291100109169 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		AF3E08B224CFD05B0018905C /* Cactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3E08B524CFD05B0018905C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3E08B924CFD05C0018905C /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3D92C624D1285300109169 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				AF3D92C824D1288700109169 /* Controller */,
+				AF3D92C724D1286A00109169 /* Model */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		AF3D92C724D1286A00109169 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF3D92C924D128B100109169 /* Session.swift */,
+				AF3D92CB24D128EA00109169 /* SessionManager.swift */,
+				AF3D92CD24D1291100109169 /* CountdownTimer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF3D92C824D1288700109169 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF3E08B924CFD05C0018905C /* SessionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AF3E08A924CFD05B0018905C = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +91,9 @@
 		AF3E08B424CFD05B0018905C /* Cactus */ = {
 			isa = PBXGroup;
 			children = (
+				AF3D92C624D1285300109169 /* Session */,
 				AF3E08B524CFD05B0018905C /* AppDelegate.swift */,
 				AF3E08C924CFE72A0018905C /* OnboardingViewController.swift */,
-				AF3E08B924CFD05C0018905C /* SessionViewController.swift */,
 				AF3D92C124D02F4100109169 /* BreakViewController.swift */,
 				AF3E08BB24CFD05C0018905C /* Main.storyboard */,
 				AF3E08BE24CFD05E0018905C /* Assets.xcassets */,
@@ -141,7 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3D92CA24D128B100109169 /* Session.swift in Sources */,
+				AF3D92CC24D128EA00109169 /* SessionManager.swift in Sources */,
 				AF3D92C224D02F4100109169 /* BreakViewController.swift in Sources */,
+				AF3D92CE24D1291100109169 /* CountdownTimer.swift in Sources */,
 				AF3E08BA24CFD05C0018905C /* SessionViewController.swift in Sources */,
 				AF3E08CA24CFE72A0018905C /* OnboardingViewController.swift in Sources */,
 				AF3E08B624CFD05C0018905C /* AppDelegate.swift in Sources */,
