@@ -180,12 +180,45 @@
                                     <action selector="didTapCloseButton" destination="H1l-9c-62J" eventType="touchUpInside" id="hh2-pO-sSB"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-fR-7gU">
+                                <rect key="frame" x="0.0" y="360" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-Ya-7Cn">
+                                <rect key="frame" x="35" y="583" width="343" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" name="darkGrey"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapFinishBreakButton" destination="H1l-9c-62J" eventType="touchUpInside" id="TCA-MU-dE6"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5:36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9d-IV-MXu">
+                                <rect key="frame" x="152" y="448" width="111" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" name="primaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You break will end in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlH-gV-w1K">
+                                <rect key="frame" x="68" y="426" width="274" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" name="grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="lBd-Mx-ugP"/>
                     </view>
                     <connections>
+                        <outlet property="breakMessageLabel" destination="tlH-gV-w1K" id="Hha-iZ-waY"/>
                         <outlet property="cactusImageView" destination="Rs8-AW-WOn" id="Iv0-OV-h1c"/>
+                        <outlet property="countdownLabel" destination="p9d-IV-MXu" id="Jkz-Z3-E4Y"/>
+                        <outlet property="finishBreakButton" destination="Uau-Ya-7Cn" id="rXS-da-Tv3"/>
+                        <outlet property="pickerView" destination="ivZ-fR-7gU" id="EBo-56-4JC"/>
                         <outlet property="takeABreakButton" destination="lgM-Yr-AcP" id="r8O-KQ-B4t"/>
                     </connections>
                 </viewController>
