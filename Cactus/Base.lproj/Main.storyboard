@@ -115,12 +115,24 @@
                                 <color key="textColor" name="primaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xp-9g-p5j">
+                                <rect key="frame" x="149" y="516" width="110" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="grey"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCancelButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="UyH-oh-QWd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.96862745098039216" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cactusImageView" destination="G51-KZ-9t2" id="Ypx-sU-NJp"/>
+                        <outlet property="cancelButton" destination="4Xp-9g-p5j" id="3cR-5L-zAN"/>
                         <outlet property="countdownLabel" destination="sXy-XC-fgo" id="feb-Le-Ghk"/>
                         <outlet property="giveUpButton" destination="Cra-2F-mqL" id="Eoc-Uy-NU5"/>
                         <outlet property="pickerView" destination="zNS-31-Afi" id="tFj-N3-FLN"/>

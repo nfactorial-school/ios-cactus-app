@@ -10,7 +10,7 @@ import Foundation
 
 protocol SessionManagerDelegate {
     func sessionDidStart(session: Session)
-    func sessionTimeLeftChanged(secondsLeft: Int)
+    func sessionTimeLeftChanged(session: Session, secondsLeft: Int)
     func sessionDidEnd(session: Session)
     func sessionDidCancel()
 }
@@ -31,7 +31,7 @@ class SessionManager {
 //                Balance.shared.addCoins(session.coinsCount)
                 self.delegate.sessionDidEnd(session: session)
             } else {
-                self.delegate.sessionTimeLeftChanged(secondsLeft: secondsLeft)
+                self.delegate.sessionTimeLeftChanged(session: session, secondsLeft: secondsLeft)
             }
         }
         
