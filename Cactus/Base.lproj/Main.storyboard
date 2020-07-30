@@ -87,7 +87,7 @@
                                 <rect key="frame" x="35" y="606" width="344" height="56"/>
                                 <color key="backgroundColor" name="primaryColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="344" id="OCZ-lg-e0l"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="344" id="OCZ-lg-e0l"/>
                                     <constraint firstAttribute="height" constant="56" id="mWd-PV-FVO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -102,7 +102,7 @@
                                 <rect key="frame" x="35.5" y="462" width="343" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="QMH-PL-7f3"/>
-                                    <constraint firstAttribute="width" constant="343" id="jsM-3A-t99"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="343" id="jsM-3A-t99"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Give up">
@@ -146,13 +146,17 @@
                         <constraints>
                             <constraint firstItem="zNS-31-Afi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0CV-NM-gi6"/>
                             <constraint firstItem="Cra-2F-mqL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ds-Kg-zvS"/>
+                            <constraint firstItem="Cra-2F-mqL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="20" id="3p1-zv-S3h"/>
                             <constraint firstItem="G51-KZ-9t2" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="5b2-nv-fTW"/>
                             <constraint firstItem="Cra-2F-mqL" firstAttribute="top" secondItem="sXy-XC-fgo" secondAttribute="bottom" constant="24" id="7YI-Mv-djL"/>
                             <constraint firstItem="4Xp-9g-p5j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C3F-IS-lhq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o51-qp-dW5" secondAttribute="trailing" priority="750" constant="20" id="Cdq-pd-lVl"/>
                             <constraint firstItem="AMj-qS-Vdz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Kf1-zl-kvM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cra-2F-mqL" secondAttribute="trailing" priority="750" constant="20" id="LqY-F4-wfa"/>
                             <constraint firstItem="G51-KZ-9t2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QrP-dk-um0"/>
                             <constraint firstItem="4Xp-9g-p5j" firstAttribute="top" secondItem="sXy-XC-fgo" secondAttribute="bottom" constant="24" id="YXO-gS-zcr"/>
                             <constraint firstItem="o51-qp-dW5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zye-f9-3kr"/>
+                            <constraint firstItem="o51-qp-dW5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="20" id="fz4-UU-1sP"/>
                             <constraint firstItem="G51-KZ-9t2" firstAttribute="top" secondItem="AMj-qS-Vdz" secondAttribute="bottom" constant="56" id="kN1-jJ-aZB"/>
                             <constraint firstItem="sXy-XC-fgo" firstAttribute="top" secondItem="G51-KZ-9t2" secondAttribute="bottom" constant="40" id="nSq-9t-QFL"/>
                             <constraint firstItem="AMj-qS-Vdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="rb2-Fz-ZoL"/>
