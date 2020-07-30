@@ -16,10 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T65-sR-vkH">
-                                <rect key="frame" x="224" y="690" width="151" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T65-sR-vkH">
+                                <rect key="frame" x="247" y="706" width="151" height="56"/>
                                 <color key="backgroundColor" name="primaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="SA8-Qv-T3b"/>
+                                    <constraint firstAttribute="height" constant="56" id="m0C-DV-hzb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Next →">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,25 +31,36 @@
                                     <action selector="didTapNextButton" destination="GTZ-mQ-pfk" eventType="touchUpInside" id="d2o-k8-mhn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Cactus app!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIO-x5-edR">
-                                <rect key="frame" x="39" y="83" width="336" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Cactus app!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIO-x5-edR">
+                                <rect key="frame" x="16" y="68" width="268" height="172"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <color key="textColor" name="secondaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KUz-Hn-eeQ">
-                                <rect key="frame" x="188" y="798" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KUz-Hn-eeQ">
+                                <rect key="frame" x="187.5" y="793" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.10980392160000001" green="0.42352941179999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding_welcome" translatesAutoresizingMaskIntoConstraints="NO" id="ei6-Aj-oEd">
-                                <rect key="frame" x="39" y="345" width="336" height="313"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_welcome" translatesAutoresizingMaskIntoConstraints="NO" id="ei6-Aj-oEd">
+                                <rect key="frame" x="16" y="326" width="382" height="356"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ei6-Aj-oEd" secondAttribute="height" multiplier="336:313" id="1yK-WD-u1M"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sIO-x5-edR" firstAttribute="top" secondItem="Vaf-4G-wAi" secondAttribute="top" constant="24" id="5a7-26-oL1"/>
+                            <constraint firstItem="KUz-Hn-eeQ" firstAttribute="centerX" secondItem="4D3-du-WVa" secondAttribute="centerX" id="AX2-TC-tcZ"/>
+                            <constraint firstItem="T65-sR-vkH" firstAttribute="top" secondItem="ei6-Aj-oEd" secondAttribute="bottom" constant="24" id="Hr1-kV-eAS"/>
+                            <constraint firstItem="Vaf-4G-wAi" firstAttribute="trailing" secondItem="ei6-Aj-oEd" secondAttribute="trailing" constant="16" id="UNr-KZ-wKT"/>
+                            <constraint firstItem="ei6-Aj-oEd" firstAttribute="leading" secondItem="Vaf-4G-wAi" secondAttribute="leading" constant="16" id="abo-hz-fUX"/>
+                            <constraint firstItem="Vaf-4G-wAi" firstAttribute="bottom" secondItem="T65-sR-vkH" secondAttribute="bottom" constant="100" id="btq-5r-0aC"/>
+                            <constraint firstItem="Vaf-4G-wAi" firstAttribute="bottom" secondItem="KUz-Hn-eeQ" secondAttribute="bottom" constant="32" id="nfc-c5-hkS"/>
+                            <constraint firstItem="sIO-x5-edR" firstAttribute="leading" secondItem="Vaf-4G-wAi" secondAttribute="leading" constant="16" id="q83-yW-rD2"/>
+                            <constraint firstItem="Vaf-4G-wAi" firstAttribute="trailing" secondItem="T65-sR-vkH" secondAttribute="trailing" constant="16" id="tk0-Nd-ipP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vaf-4G-wAi"/>
                     </view>
                     <connections>
