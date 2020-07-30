@@ -69,22 +69,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start planting today!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMj-qS-Vdz">
-                                <rect key="frame" x="29" y="74" width="350" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start planting today!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMj-qS-Vdz">
+                                <rect key="frame" x="16" y="68" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.19215686274509802" green="0.1764705882352941" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="G51-KZ-9t2">
-                                <rect key="frame" x="101" y="200" width="213" height="213"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="G51-KZ-9t2">
+                                <rect key="frame" x="100.5" y="145" width="213" height="213"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G51-KZ-9t2" secondAttribute="height" multiplier="1:1" id="Ejd-qc-Wgl"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="213" id="dSE-Qd-NSl"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o51-qp-dW5">
-                                <rect key="frame" x="35" y="653" width="344" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o51-qp-dW5">
+                                <rect key="frame" x="35" y="606" width="344" height="56"/>
                                 <color key="backgroundColor" name="primaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="344" id="OCZ-lg-e0l"/>
+                                    <constraint firstAttribute="height" constant="56" id="mWd-PV-FVO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Plant">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,13 +98,12 @@
                                     <action selector="didTapPlantButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVG-md-wiD"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNS-31-Afi">
-                                <rect key="frame" x="0.0" y="421" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cra-2F-mqL">
-                                <rect key="frame" x="36" y="505" width="343" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cra-2F-mqL">
+                                <rect key="frame" x="35.5" y="462" width="343" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="QMH-PL-7f3"/>
+                                    <constraint firstAttribute="width" constant="343" id="jsM-3A-t99"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Give up">
                                     <color key="titleColor" name="darkGrey"/>
@@ -108,16 +112,21 @@
                                     <action selector="didTapGiveUpButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2y-eB-3D5"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5:36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXy-XC-fgo">
-                                <rect key="frame" x="152" y="448" width="111" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXy-XC-fgo">
+                                <rect key="frame" x="169.5" y="398" width="75" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fyf-6q-xVg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" name="primaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xp-9g-p5j">
-                                <rect key="frame" x="149" y="516" width="110" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xp-9g-p5j">
+                                <rect key="frame" x="35" y="462" width="344" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="gF1-Rf-W72"/>
+                                    <constraint firstAttribute="width" constant="344" id="lB5-mi-78e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="grey"/>
@@ -126,8 +135,31 @@
                                     <action selector="didTapCancelButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="UyH-oh-QWd"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNS-31-Afi">
+                                <rect key="frame" x="157" y="382" width="100" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="uJ3-eK-a10"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.96862745098039216" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zNS-31-Afi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0CV-NM-gi6"/>
+                            <constraint firstItem="Cra-2F-mqL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ds-Kg-zvS"/>
+                            <constraint firstItem="G51-KZ-9t2" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="5b2-nv-fTW"/>
+                            <constraint firstItem="Cra-2F-mqL" firstAttribute="top" secondItem="sXy-XC-fgo" secondAttribute="bottom" constant="24" id="7YI-Mv-djL"/>
+                            <constraint firstItem="4Xp-9g-p5j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C3F-IS-lhq"/>
+                            <constraint firstItem="AMj-qS-Vdz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Kf1-zl-kvM"/>
+                            <constraint firstItem="G51-KZ-9t2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QrP-dk-um0"/>
+                            <constraint firstItem="4Xp-9g-p5j" firstAttribute="top" secondItem="sXy-XC-fgo" secondAttribute="bottom" constant="24" id="YXO-gS-zcr"/>
+                            <constraint firstItem="o51-qp-dW5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zye-f9-3kr"/>
+                            <constraint firstItem="G51-KZ-9t2" firstAttribute="top" secondItem="AMj-qS-Vdz" secondAttribute="bottom" constant="56" id="kN1-jJ-aZB"/>
+                            <constraint firstItem="sXy-XC-fgo" firstAttribute="top" secondItem="G51-KZ-9t2" secondAttribute="bottom" constant="40" id="nSq-9t-QFL"/>
+                            <constraint firstItem="AMj-qS-Vdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="rb2-Fz-ZoL"/>
+                            <constraint firstItem="zNS-31-Afi" firstAttribute="top" secondItem="G51-KZ-9t2" secondAttribute="bottom" constant="24" id="rg3-eh-yRx"/>
+                            <constraint firstItem="sXy-XC-fgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uO4-aW-ysQ"/>
+                            <constraint firstItem="o51-qp-dW5" firstAttribute="top" secondItem="zNS-31-Afi" secondAttribute="bottom" constant="8" id="yn8-Zk-etF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -137,7 +169,7 @@
                         <outlet property="giveUpButton" destination="Cra-2F-mqL" id="Eoc-Uy-NU5"/>
                         <outlet property="pickerView" destination="zNS-31-Afi" id="tFj-N3-FLN"/>
                         <outlet property="plantButton" destination="o51-qp-dW5" id="8h3-iu-Iu9"/>
-                        <outlet property="topLabel" destination="AMj-qS-Vdz" id="J8v-iG-CfU"/>
+                        <outlet property="topLabel" destination="AMj-qS-Vdz" id="jin-Ec-eH3"/>
                         <segue destination="H1l-9c-62J" kind="presentation" identifier="showBreak" id="VNK-Sx-gdL"/>
                     </connections>
                 </viewController>
@@ -221,6 +253,13 @@
                                 <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="U2z-ne-MXh">
+                                <rect key="frame" x="155" y="75" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="OfR-4E-etk" eventType="valueChanged" id="tzf-wE-fLA"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="lBd-Mx-ugP"/>
@@ -235,6 +274,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFJ-mr-cSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="OfR-4E-etk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1062.3188405797102" y="112.5"/>
         </scene>
