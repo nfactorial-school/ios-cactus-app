@@ -68,14 +68,14 @@
                         <outlet property="nextButton" destination="T65-sR-vkH" id="mTF-nY-tdn"/>
                         <outlet property="pageControl" destination="KUz-Hn-eeQ" id="cxb-zs-VM0"/>
                         <outlet property="textLabel" destination="sIO-x5-edR" id="cLB-wO-W1Y"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showSession" modalPresentationStyle="fullScreen" id="fHH-5w-cVl"/>
+                        <segue destination="aF7-Mm-D6j" kind="presentation" identifier="showSession" modalPresentationStyle="fullScreen" id="fHH-5w-cVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2q4-Zd-dsQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-759.4202898550725" y="105.80357142857143"/>
         </scene>
-        <!--Session View Controller-->
+        <!--Focus-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SessionViewController" customModule="Cactus" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,6 +180,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Focus" image="focus_icon" id="oqt-Gr-3UL"/>
                     <connections>
                         <outlet property="cactusImageView" destination="G51-KZ-9t2" id="Ypx-sU-NJp"/>
                         <outlet property="cancelButton" destination="4Xp-9g-p5j" id="3cR-5L-zAN"/>
@@ -193,7 +194,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+            <point key="canvasLocation" x="1162" y="-340"/>
+        </scene>
+        <!--Sessions List View Controller-->
+        <scene sceneID="3x0-5b-lZ4">
+            <objects>
+                <viewController id="vNv-FH-YdT" customClass="SessionsListViewController" customModule="Cactus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2yT-3v-xDy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CdV-1I-DqL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="session_cell" id="aH7-th-jxN" customClass="SessionsListTableViewCell" customModule="Cactus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="104.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aH7-th-jxN" id="NhA-iy-Os6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="y7j-m1-KwN">
+                                                    <rect key="frame" x="16" y="16" width="72" height="72.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="T4r-J7-h4D"/>
+                                                        <constraint firstAttribute="height" constant="72" id="lta-x7-VFI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Jul. 2020, 12:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3b-WP-mp1">
+                                                    <rect key="frame" x="104" y="16" width="122" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" name="grey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywR-iK-qkn">
+                                                    <rect key="frame" x="104" y="38" width="75" height="41"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                    <color key="textColor" name="darkGrey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y7j-m1-KwN" firstAttribute="leading" secondItem="NhA-iy-Os6" secondAttribute="leading" constant="16" id="4uz-fL-pSD"/>
+                                                <constraint firstAttribute="bottom" secondItem="y7j-m1-KwN" secondAttribute="bottom" constant="16" id="5UF-75-5rB"/>
+                                                <constraint firstItem="ywR-iK-qkn" firstAttribute="top" secondItem="X3b-WP-mp1" secondAttribute="bottom" constant="8" id="6Hi-z4-U4m"/>
+                                                <constraint firstItem="X3b-WP-mp1" firstAttribute="leading" secondItem="y7j-m1-KwN" secondAttribute="trailing" constant="16" id="8Te-Xn-hVQ"/>
+                                                <constraint firstItem="X3b-WP-mp1" firstAttribute="top" secondItem="y7j-m1-KwN" secondAttribute="top" id="OBm-cS-Fax"/>
+                                                <constraint firstItem="ywR-iK-qkn" firstAttribute="leading" secondItem="X3b-WP-mp1" secondAttribute="leading" id="Po7-xb-avM"/>
+                                                <constraint firstItem="y7j-m1-KwN" firstAttribute="top" secondItem="NhA-iy-Os6" secondAttribute="top" constant="16" id="rcj-vh-t0b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cactusImageView" destination="y7j-m1-KwN" id="ivR-7b-OFD"/>
+                                            <outlet property="durationLabel" destination="ywR-iK-qkn" id="gKu-eb-GK6"/>
+                                            <outlet property="startDateLabel" destination="X3b-WP-mp1" id="Tki-GH-NiM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vNv-FH-YdT" id="ZR8-Ye-fEY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Lx-iB-Pxj" firstAttribute="trailing" secondItem="CdV-1I-DqL" secondAttribute="trailing" id="EbZ-vU-z27"/>
+                            <constraint firstItem="2Lx-iB-Pxj" firstAttribute="bottom" secondItem="CdV-1I-DqL" secondAttribute="bottom" id="Mic-uc-h74"/>
+                            <constraint firstItem="CdV-1I-DqL" firstAttribute="top" secondItem="2Lx-iB-Pxj" secondAttribute="top" id="Vfo-M0-d6l"/>
+                            <constraint firstItem="CdV-1I-DqL" firstAttribute="leading" secondItem="2Lx-iB-Pxj" secondAttribute="leading" id="Xaa-xl-fUb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Lx-iB-Pxj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aph-5H-q7S"/>
+                    <connections>
+                        <outlet property="tableView" destination="CdV-1I-DqL" id="nTL-fD-G8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJ0-9V-80u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071.0144927536235" y="445.98214285714283"/>
         </scene>
         <!--Break View Controller-->
         <scene sceneID="LMd-c9-Vdd">
@@ -250,7 +332,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-fR-7gU">
-                                <rect key="frame" x="157" y="310" width="139" height="216"/>
+                                <rect key="frame" x="157" y="309.5" width="100" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="xQP-mu-IUK"/>
                                 </constraints>
@@ -270,13 +352,13 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9d-IV-MXu">
-                                <rect key="frame" x="169.5" y="427.5" width="75.5" height="41"/>
+                                <rect key="frame" x="169" y="427.5" width="76" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" name="primaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You break will end in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlH-gV-w1K">
-                                <rect key="frame" x="153.5" y="405.5" width="107.5" height="14"/>
+                                <rect key="frame" x="153" y="405.5" width="108" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
@@ -322,13 +404,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFJ-mr-cSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062.3188405797102" y="112.5"/>
+            <point key="canvasLocation" x="2087" y="-333"/>
+        </scene>
+        <!--Cactus Tab Bar Controller-->
+        <scene sceneID="npD-x8-ilW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aF7-Mm-D6j" customClass="CactusTabBarController" customModule="Cactus" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ap7-OM-dOK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eOF-SQ-CGV"/>
+                        <segue destination="51T-7i-NQC" kind="relationship" relationship="viewControllers" id="jab-tJ-Suz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECM-Dg-SpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+        <!--Sessions-->
+        <scene sceneID="nOY-uz-pj1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="51T-7i-NQC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sessions" image="sessions_icon" id="Ix9-QK-maS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ycm-R9-1AI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vNv-FH-YdT" kind="relationship" relationship="rootViewController" id="Pkt-qC-w3Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jx5-pm-vEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8695652173915" y="445.98214285714283"/>
         </scene>
     </scenes>
     <resources>
         <image name="cactus_1" width="564" height="846"/>
         <image name="close" width="30" height="30"/>
+        <image name="focus_icon" width="30" height="28"/>
         <image name="onboarding_welcome" width="336" height="208"/>
+        <image name="sessions_icon" width="30" height="28"/>
         <namedColor name="backgroundColor">
             <color red="0.99199998378753662" green="0.96899998188018799" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -27,7 +27,7 @@ class SessionManager {
     func startSession(session: Session) {
         sessionTimer = CountdownTimer(durationInSeconds: session.durationInSeconds) { secondsLeft in
             if secondsLeft == 0 {
-//                SessionsStorage.shared.addSession(session)
+                SessionsStorage.shared.addSession(session)
 //                Balance.shared.addCoins(session.coinsCount)
                 self.delegate.sessionDidEnd(session: session)
             } else {

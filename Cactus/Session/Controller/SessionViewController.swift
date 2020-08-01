@@ -45,7 +45,7 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let selectedDuration = durations[selectedPickerRow]
         
         // не превращаем минуты в секунды, чтобы было проще тестировать
-        let session = Session(durationInSeconds: selectedDuration)
+        let session = Session(durationInSeconds: selectedDuration, startDate: Date())
         sessionManager.startSession(session: session)
     }
     
