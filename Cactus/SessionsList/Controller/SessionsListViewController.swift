@@ -35,4 +35,11 @@ class SessionsListViewController: UIViewController, UITableViewDataSource {
         
         return sessionCell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            SessionsStorage.shared.sessions.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
 }
