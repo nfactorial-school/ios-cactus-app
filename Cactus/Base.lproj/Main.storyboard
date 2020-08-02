@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -420,6 +421,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eOF-SQ-CGV"/>
                         <segue destination="51T-7i-NQC" kind="relationship" relationship="viewControllers" id="jab-tJ-Suz"/>
                         <segue destination="QTh-eh-SPW" kind="relationship" relationship="viewControllers" id="JlA-cv-hzJ"/>
+                        <segue destination="1Lm-oS-Cv7" kind="relationship" relationship="viewControllers" id="rQN-OZ-ilA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECM-Dg-SpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -553,6 +555,122 @@
             </objects>
             <point key="canvasLocation" x="1160.8695652173915" y="1184.5982142857142"/>
         </scene>
+        <!--Learn View Controller-->
+        <scene sceneID="U2e-qv-2td">
+            <objects>
+                <viewController id="wKW-H6-4mU" customClass="LearnViewController" customModule="Cactus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMI-UD-lmE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="59U-xq-lZb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="12M-0t-Pg8"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="article_cell" id="5Ii-ZL-eye" customClass="ArticleCollectionViewCell" customModule="Cactus" customModuleProvider="target">
+                                        <rect key="frame" x="58" y="0.0" width="298" height="279"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EEL-Qk-GHY">
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="279"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Xr-Up-BCY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="279"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn_image" translatesAutoresizingMaskIntoConstraints="NO" id="tkC-NE-WEg">
+                                                            <rect key="frame" x="16" y="16" width="266" height="155"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="155" id="Fte-vZ-Wxg"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to stay more productive at home?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFN-Lg-73s">
+                                                            <rect key="frame" x="16" y="187" width="266" height="41"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <color key="textColor" name="blackColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Productivity describes various measures of the efficiency of production." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNs-Gr-b0w">
+                                                            <rect key="frame" x="16" y="236" width="266" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" name="blackColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="JFN-Lg-73s" firstAttribute="leading" secondItem="2Xr-Up-BCY" secondAttribute="leading" constant="16" id="Ojt-TL-Pnc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HNs-Gr-b0w" secondAttribute="trailing" constant="16" id="Qcs-ge-vbi"/>
+                                                        <constraint firstItem="HNs-Gr-b0w" firstAttribute="leading" secondItem="2Xr-Up-BCY" secondAttribute="leading" constant="16" id="UTq-Ga-rIL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="HNs-Gr-b0w" secondAttribute="bottom" constant="16" id="Xfz-7R-TtG"/>
+                                                        <constraint firstItem="JFN-Lg-73s" firstAttribute="top" secondItem="tkC-NE-WEg" secondAttribute="bottom" constant="16" id="Xos-Du-Mlc"/>
+                                                        <constraint firstItem="tkC-NE-WEg" firstAttribute="leading" secondItem="2Xr-Up-BCY" secondAttribute="leading" constant="16" id="c0J-vh-Tn6"/>
+                                                        <constraint firstItem="HNs-Gr-b0w" firstAttribute="top" secondItem="JFN-Lg-73s" secondAttribute="bottom" constant="8" id="q6N-Li-UUL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JFN-Lg-73s" secondAttribute="trailing" constant="16" id="q7D-eQ-bat"/>
+                                                        <constraint firstItem="tkC-NE-WEg" firstAttribute="top" secondItem="2Xr-Up-BCY" secondAttribute="top" constant="16" id="y8D-5O-NVV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tkC-NE-WEg" secondAttribute="trailing" constant="16" id="yJ8-6m-Vbd"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="2Xr-Up-BCY" secondAttribute="trailing" id="M16-MQ-SSM"/>
+                                                <constraint firstAttribute="bottom" secondItem="2Xr-Up-BCY" secondAttribute="bottom" id="OFS-72-m2Y"/>
+                                                <constraint firstItem="2Xr-Up-BCY" firstAttribute="top" secondItem="EEL-Qk-GHY" secondAttribute="top" id="UHc-rB-xo5"/>
+                                                <constraint firstItem="2Xr-Up-BCY" firstAttribute="leading" secondItem="EEL-Qk-GHY" secondAttribute="leading" id="WiV-fI-mvQ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="298" height="279"/>
+                                        <connections>
+                                            <outlet property="cardView" destination="2Xr-Up-BCY" id="JcB-MW-qqy"/>
+                                            <outlet property="subtitleLabel" destination="HNs-Gr-b0w" id="0er-mL-zsV"/>
+                                            <outlet property="thumbnailImageView" destination="tkC-NE-WEg" id="guy-g7-5CC"/>
+                                            <outlet property="titleLabel" destination="JFN-Lg-73s" id="a19-jw-bre"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wKW-H6-4mU" id="cP6-Uj-NB7"/>
+                                    <outlet property="delegate" destination="wKW-H6-4mU" id="OFl-9K-dxo"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UQS-cK-Vlu" firstAttribute="trailing" secondItem="59U-xq-lZb" secondAttribute="trailing" id="bs0-g1-bMa"/>
+                            <constraint firstItem="UQS-cK-Vlu" firstAttribute="bottom" secondItem="59U-xq-lZb" secondAttribute="bottom" id="gsv-xH-aRU"/>
+                            <constraint firstItem="59U-xq-lZb" firstAttribute="top" secondItem="UQS-cK-Vlu" secondAttribute="top" id="sa5-R0-evd"/>
+                            <constraint firstItem="59U-xq-lZb" firstAttribute="leading" secondItem="UQS-cK-Vlu" secondAttribute="leading" id="wSv-ZN-cbN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UQS-cK-Vlu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4tV-DL-wdq"/>
+                    <connections>
+                        <outlet property="collectionView" destination="59U-xq-lZb" id="3Ab-Zh-gEL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uE-MR-UbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2089.8550724637685" y="1956.6964285714284"/>
+        </scene>
+        <!--Learn-->
+        <scene sceneID="EdJ-kI-Wb1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Lm-oS-Cv7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Learn" image="learn_icon" id="iOb-Kv-TI0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGf-UP-Esw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wKW-H6-4mU" kind="relationship" relationship="rootViewController" id="7hJ-eg-wWC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kQ-Lz-aL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179.7101449275362" y="1956.6964285714284"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cactus_1" width="564" height="846"/>
@@ -560,10 +678,15 @@
         <image name="focus_icon" width="30" height="28"/>
         <image name="leaderboard_avatar" width="72" height="72"/>
         <image name="leaderboard_icon" width="30" height="28"/>
+        <image name="learn_icon" width="30" height="28"/>
+        <image name="learn_image" width="311" height="155"/>
         <image name="onboarding_welcome" width="336" height="208"/>
         <image name="sessions_icon" width="30" height="28"/>
         <namedColor name="backgroundColor">
             <color red="0.99199998378753662" green="0.96899998188018799" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blackColor">
+            <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkGrey">
             <color red="0.19200000166893005" green="0.17599999904632568" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
