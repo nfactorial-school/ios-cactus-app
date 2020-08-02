@@ -90,13 +90,17 @@
                                 <color key="textColor" red="0.19215686274509802" green="0.1764705882352941" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="G51-KZ-9t2">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="G51-KZ-9t2">
                                 <rect key="frame" x="100.5" y="145" width="213" height="213"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="G51-KZ-9t2" secondAttribute="height" multiplier="1:1" id="Ejd-qc-Wgl"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="213" id="dSE-Qd-NSl"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="l0y-61-0X7" appends="YES" id="Z45-nw-n2k"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o51-qp-dW5">
                                 <rect key="frame" x="35" y="606" width="344" height="56"/>
@@ -194,6 +198,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="l0y-61-0X7">
+                    <connections>
+                        <segue destination="xo5-dt-kNG" kind="presentation" id="2SG-CH-qpP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1162" y="-340"/>
         </scene>
@@ -277,6 +286,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJ0-9V-80u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2071.0144927536235" y="445.98214285714283"/>
+        </scene>
+        <!--Cactus Shop View Controller-->
+        <scene sceneID="iUb-u9-4xi">
+            <objects>
+                <viewController id="xo5-dt-kNG" customClass="CactusShopViewController" customModule="Cactus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5KF-kz-mOD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cactie Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZf-X6-47u">
+                                <rect key="frame" x="158.5" y="38" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's pick a cactus!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGe-cT-Gbx">
+                                <rect key="frame" x="16" y="8" width="382" height="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                <color key="textColor" name="grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-ut-xAf">
+                                <rect key="frame" x="16" y="33.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="qET-8K-Jv8"/>
+                                    <constraint firstAttribute="height" constant="30" id="qJi-JH-EU4"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="close"/>
+                                <connections>
+                                    <action selector="didTapCloseButton" destination="xo5-dt-kNG" eventType="touchUpInside" id="LvO-Pz-65N"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-Da-NfD">
+                                <rect key="frame" x="0.0" y="89" width="414" height="719"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="ouJ-Ti-BKk"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cactus_cell" id="JF2-93-3ED" customClass="CactusCollectionViewCell" customModule="Cactus" customModuleProvider="target">
+                                        <rect key="frame" x="105.5" y="0.0" width="203" height="227"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9bz-XS-irE">
+                                            <rect key="frame" x="0.0" y="0.0" width="203" height="227"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ia4-RO-szS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="203" height="227"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="W0E-a0-Mzh">
+                                                            <rect key="frame" x="16" y="16" width="171" height="163"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="W0E-a0-Mzh" secondAttribute="height" multiplier="1:1" id="aOJ-ro-l78"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="primaryColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="W0E-a0-Mzh" firstAttribute="top" secondItem="Ia4-RO-szS" secondAttribute="top" constant="16" id="EVz-u0-ps1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="W0E-a0-Mzh" secondAttribute="trailing" constant="16" id="MuM-8w-yey"/>
+                                                        <constraint firstItem="W0E-a0-Mzh" firstAttribute="leading" secondItem="Ia4-RO-szS" secondAttribute="leading" constant="16" id="cuT-4h-Hnt"/>
+                                                        <constraint firstAttribute="bottom" secondItem="W0E-a0-Mzh" secondAttribute="bottom" constant="48" id="gtC-fG-Ixc"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Ia4-RO-szS" secondAttribute="bottom" id="6Q5-dx-p3q"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ia4-RO-szS" secondAttribute="trailing" id="QXh-G0-kTr"/>
+                                                <constraint firstItem="Ia4-RO-szS" firstAttribute="leading" secondItem="9bz-XS-irE" secondAttribute="leading" id="gP2-MH-3JI"/>
+                                                <constraint firstItem="Ia4-RO-szS" firstAttribute="top" secondItem="9bz-XS-irE" secondAttribute="top" id="qG0-nj-kPD"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="203" height="227"/>
+                                        <connections>
+                                            <outlet property="cactusImageView" destination="W0E-a0-Mzh" id="Qc7-BF-ybV"/>
+                                            <outlet property="cardView" destination="Ia4-RO-szS" id="qKQ-kr-NAX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="xo5-dt-kNG" id="EUd-8v-YGZ"/>
+                                    <outlet property="delegate" destination="xo5-dt-kNG" id="LkN-Na-z60"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gR0-dk-COA" firstAttribute="bottom" secondItem="LOl-Da-NfD" secondAttribute="bottom" id="0X9-cp-UFN"/>
+                            <constraint firstItem="Sat-ut-xAf" firstAttribute="centerY" secondItem="OZf-X6-47u" secondAttribute="centerY" id="5s2-67-3pP"/>
+                            <constraint firstItem="LOl-Da-NfD" firstAttribute="top" secondItem="OZf-X6-47u" secondAttribute="bottom" constant="30" id="8Tn-09-cyH"/>
+                            <constraint firstItem="gR0-dk-COA" firstAttribute="trailing" secondItem="LOl-Da-NfD" secondAttribute="trailing" id="I0U-KI-m1F"/>
+                            <constraint firstItem="tGe-cT-Gbx" firstAttribute="top" secondItem="gR0-dk-COA" secondAttribute="top" constant="8" id="RAY-hM-TZM"/>
+                            <constraint firstItem="tGe-cT-Gbx" firstAttribute="leading" secondItem="gR0-dk-COA" secondAttribute="leading" constant="16" id="cTz-e9-9wx"/>
+                            <constraint firstItem="LOl-Da-NfD" firstAttribute="leading" secondItem="gR0-dk-COA" secondAttribute="leading" id="h3V-Bv-gzP"/>
+                            <constraint firstItem="Sat-ut-xAf" firstAttribute="leading" secondItem="gR0-dk-COA" secondAttribute="leading" constant="16" id="ldd-bx-Z4b"/>
+                            <constraint firstItem="OZf-X6-47u" firstAttribute="centerX" secondItem="gR0-dk-COA" secondAttribute="centerX" id="mfN-1a-XfK"/>
+                            <constraint firstItem="gR0-dk-COA" firstAttribute="trailing" secondItem="tGe-cT-Gbx" secondAttribute="trailing" constant="16" id="oUJ-Vy-MLs"/>
+                            <constraint firstItem="OZf-X6-47u" firstAttribute="top" secondItem="tGe-cT-Gbx" secondAttribute="bottom" constant="16" id="qgr-Zo-Ia8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gR0-dk-COA"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="LOl-Da-NfD" id="dqz-1E-soK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ux1-p8-KU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101.449275362319" y="-984.375"/>
         </scene>
         <!--Break View Controller-->
         <scene sceneID="LMd-c9-Vdd">

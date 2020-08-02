@@ -48,5 +48,7 @@ class SessionsListTableViewCell: UITableViewCell {
         
         let startDateText = "\(SessionsListTableViewCell.dateFormatter.string(from: session.startDate))"
         startDateLabel.text = startDateText
+        
+        cactusImageView.image = UIImage(named: session.cactus.imageName)
     }
 }

@@ -9,7 +9,6 @@
 import UIKit
 
 class BreakViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, BreakManagerDelegate {
-    
     @IBOutlet var cactusImageView: UIImageView!
     @IBOutlet var takeABreakButton: UIButton!
     
@@ -18,6 +17,8 @@ class BreakViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet var breakMessageLabel: UILabel!
     @IBOutlet var finishBreakButton: UIButton!
     
+    var finishedSession: Session!
+    
     lazy var breakManager = BreakManager(delegate: self)
     
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class BreakViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
         cactusImageView.layer.cornerRadius = cactusImageView.frame.width / 2
         cactusImageView.layer.masksToBounds = true
+        cactusImageView.image = UIImage(named: finishedSession.cactus.imageName)
         
         takeABreakButton.layer.cornerRadius = 14
         takeABreakButton.layer.masksToBounds = true
