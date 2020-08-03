@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -420,6 +421,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eOF-SQ-CGV"/>
                         <segue destination="51T-7i-NQC" kind="relationship" relationship="viewControllers" id="jab-tJ-Suz"/>
                         <segue destination="QTh-eh-SPW" kind="relationship" relationship="viewControllers" id="JlA-cv-hzJ"/>
+                        <segue destination="HT8-yn-VQm" kind="relationship" relationship="viewControllers" id="Z3R-OS-Fa7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECM-Dg-SpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -553,6 +555,127 @@
             </objects>
             <point key="canvasLocation" x="1160.8695652173915" y="1184.5982142857142"/>
         </scene>
+        <!--Learn View Controller-->
+        <scene sceneID="By9-x2-o6H">
+            <objects>
+                <viewController id="OAl-pl-1X9" customClass="LearnViewController" customModule="Cactus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxQ-W7-QVD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q9W-Ng-dwJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bn5-ec-BLC">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="article_cell" id="mK8-LG-NsC" customClass="ArticleCollectionViewCell" customModule="Cactus" customModuleProvider="target">
+                                        <rect key="frame" x="51" y="0.0" width="312" height="285"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MBW-tP-kGM">
+                                            <rect key="frame" x="0.0" y="0.0" width="312" height="285"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-x2-Y6k">
+                                                    <rect key="frame" x="0.0" y="0.0" width="312" height="285"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learn_image" translatesAutoresizingMaskIntoConstraints="NO" id="37P-ly-rVB">
+                                                            <rect key="frame" x="16" y="16" width="280" height="155"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="155" id="nIu-6d-dQU"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to stay more productive at home?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nd-W1-aF5">
+                                                            <rect key="frame" x="16" y="187" width="280" height="41"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <color key="textColor" name="black"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Productivity describes various measures of the efficiency of production." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7t-Q5-rUI">
+                                                            <rect key="frame" x="16" y="236" width="280" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" name="black"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="37P-ly-rVB" firstAttribute="leading" secondItem="AEl-x2-Y6k" secondAttribute="leading" constant="16" id="4lt-R1-paW"/>
+                                                        <constraint firstItem="6Nd-W1-aF5" firstAttribute="leading" secondItem="AEl-x2-Y6k" secondAttribute="leading" constant="16" id="7Mm-a2-Fjd"/>
+                                                        <constraint firstItem="37P-ly-rVB" firstAttribute="top" secondItem="AEl-x2-Y6k" secondAttribute="top" constant="16" id="7bs-OK-YTU"/>
+                                                        <constraint firstItem="6Nd-W1-aF5" firstAttribute="top" secondItem="37P-ly-rVB" secondAttribute="bottom" constant="16" id="Aa3-k7-a4I"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6Nd-W1-aF5" secondAttribute="trailing" constant="16" id="SlJ-FB-s8l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="37P-ly-rVB" secondAttribute="trailing" constant="16" id="V3N-IH-FXH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="l7t-Q5-rUI" secondAttribute="bottom" constant="16" id="adE-bu-Av9"/>
+                                                        <constraint firstItem="l7t-Q5-rUI" firstAttribute="leading" secondItem="AEl-x2-Y6k" secondAttribute="leading" constant="16" id="jxT-Rb-IM3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="l7t-Q5-rUI" secondAttribute="trailing" constant="16" id="nLQ-V9-Mm3"/>
+                                                        <constraint firstItem="l7t-Q5-rUI" firstAttribute="top" secondItem="6Nd-W1-aF5" secondAttribute="bottom" constant="8" id="rtb-FX-uYj"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AEl-x2-Y6k" firstAttribute="top" secondItem="MBW-tP-kGM" secondAttribute="top" id="9EH-CJ-vqB"/>
+                                                <constraint firstItem="AEl-x2-Y6k" firstAttribute="leading" secondItem="MBW-tP-kGM" secondAttribute="leading" id="Kon-KZ-Wpt"/>
+                                                <constraint firstAttribute="bottom" secondItem="AEl-x2-Y6k" secondAttribute="bottom" id="lkb-r7-lTf"/>
+                                                <constraint firstAttribute="trailing" secondItem="AEl-x2-Y6k" secondAttribute="trailing" id="vGW-BS-gfy"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="312" height="285"/>
+                                        <connections>
+                                            <outlet property="cardView" destination="AEl-x2-Y6k" id="899-Vt-pLE"/>
+                                            <outlet property="subtitleLabel" destination="l7t-Q5-rUI" id="nwL-KD-8WX"/>
+                                            <outlet property="thumbnailImageView" destination="37P-ly-rVB" id="ssj-1g-6G6"/>
+                                            <outlet property="titleLabel" destination="6Nd-W1-aF5" id="tTy-Dw-FFI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="OAl-pl-1X9" id="9f8-Jp-Gup"/>
+                                    <outlet property="delegate" destination="OAl-pl-1X9" id="wG4-p9-Epa"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aUt-Ez-wen" firstAttribute="bottom" secondItem="q9W-Ng-dwJ" secondAttribute="bottom" id="0dT-hn-nLV"/>
+                            <constraint firstItem="q9W-Ng-dwJ" firstAttribute="top" secondItem="aUt-Ez-wen" secondAttribute="top" id="bfR-tR-1TQ"/>
+                            <constraint firstItem="q9W-Ng-dwJ" firstAttribute="leading" secondItem="aUt-Ez-wen" secondAttribute="leading" id="eRN-ym-bBO"/>
+                            <constraint firstItem="aUt-Ez-wen" firstAttribute="trailing" secondItem="q9W-Ng-dwJ" secondAttribute="trailing" id="sKs-Ba-YVt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aUt-Ez-wen"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2sT-b5-Xew"/>
+                    <connections>
+                        <outlet property="collectionView" destination="q9W-Ng-dwJ" id="zXW-BQ-elA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAg-e3-0kz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2043.4782608695655" y="1861.6071428571427"/>
+        </scene>
+        <!--Learn-->
+        <scene sceneID="dMc-PR-YKd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HT8-yn-VQm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Learn" image="learn_icon" id="ePy-Fd-J7f"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c0d-qn-0OU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OAl-pl-1X9" kind="relationship" relationship="rootViewController" id="ZzU-NS-Onx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tr-Oo-5SN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133.3333333333335" y="1861.6071428571427"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cactus_1" width="564" height="846"/>
@@ -560,10 +683,15 @@
         <image name="focus_icon" width="30" height="28"/>
         <image name="leaderboard_avatar" width="72" height="72"/>
         <image name="leaderboard_icon" width="30" height="28"/>
+        <image name="learn_icon" width="30" height="28"/>
+        <image name="learn_image" width="311" height="155"/>
         <image name="onboarding_welcome" width="336" height="208"/>
         <image name="sessions_icon" width="30" height="28"/>
         <namedColor name="backgroundColor">
             <color red="0.99199998378753662" green="0.96899998188018799" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black">
+            <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkGrey">
             <color red="0.19200000166893005" green="0.17599999904632568" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
