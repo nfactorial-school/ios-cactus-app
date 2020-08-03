@@ -22,6 +22,8 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet var cancelButton: UIButton!
     lazy var sessionManager = SessionManager(delegate: self)
     
+    var finishedSession: Session?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,8 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         pickerView.dataSource = self
         pickerView.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didSelectCactus), name: NSNotification.Name(rawValue: "cactus_was_selected"), object: nil)
     }
     
     @IBAction func didTapPlantButton() {
@@ -45,7 +49,9 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let selectedDuration = durations[selectedPickerRow]
         
         // не превращаем минуты в секунды, чтобы было проще тестировать
-        let session = Session(durationInSeconds: selectedDuration, startDate: Date())
+        let session = Session(durationInSeconds: selectedDuration,
+                              startDate: Date(),
+                              cactus: CactusesStorage.shared.selectedCactus)
         sessionManager.startSession(session: session)
     }
     
@@ -104,6 +110,8 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     func sessionDidEnd(session: Session) {
         topLabel.text = "You've planted a cactus!"
+        
+        finishedSession = session
         performSegue(withIdentifier: "showBreak", sender: nil)
         
         pickerView.isHidden = false
@@ -127,6 +135,18 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         UIView.performWithoutAnimation {
             cancelButton.setTitle(title, for: .normal)
             cancelButton.layoutIfNeeded()
+        }
+    }
+    
+    @objc func didSelectCactus() {
+        cactusImageView.image = UIImage(named: CactusesStorage.shared.selectedCactus.imageName)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let vc = segue.destination as? BreakViewController {
+            vc.finishedSession = finishedSession
         }
     }
 }
