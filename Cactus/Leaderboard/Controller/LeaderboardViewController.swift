@@ -37,4 +37,14 @@ class LeaderboardViewController: UIViewController, UITableViewDataSource {
         
         return leaderCell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let leaderVC = segue.destination as? LeaderViewController {
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            let selectedLeader = leadersStorage.leaders[selectedIndexPath.row]
+            leaderVC.leader = selectedLeader
+        }
+    }
 }

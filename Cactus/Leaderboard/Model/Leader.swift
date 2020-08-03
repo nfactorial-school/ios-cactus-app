@@ -10,10 +10,16 @@ import Foundation
 
 class Leader {
     let name: String
-    let hoursCount: Int
+    let about: String
+    let daysCount: Int
+    let sessionsCount: Int
+    let totalFocusTimeInMinutes: Int
     
-    init(name: String, hoursCount: Int) {
+    init(name: String, about: String, daysCount: Int, sessionsCount: Int, totalFocusTimeInMinutes: Int) {
         self.name = name
-        self.hoursCount = hoursCount
+        self.about = about
+        self.daysCount = daysCount
+        self.sessionsCount = sessionsCount
+        self.totalFocusTimeInMinutes = totalFocusTimeInMinutes
     }
 }
