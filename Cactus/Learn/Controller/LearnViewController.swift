@@ -34,8 +34,10 @@ class LearnViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let article = articlesStorage.articles[indexPath.row]
-        print("clicked \(article.title)")
+//        let article = articlesStorage.articles[indexPath.row]
+//        print("clicked \(article.title)")
+        
+        performSegue(withIdentifier: "showArticle", sender: nil)
     }
     
     func layoutForCollectionView() -> UICollectionViewCompositionalLayout {
@@ -50,5 +52,15 @@ class LearnViewController: UIViewController, UICollectionViewDataSource, UIColle
         section.interGroupSpacing = 16
         
         return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let articleVC = segue.destination as? ArticleViewController {
+            let selectedIndexPath = collectionView.indexPathsForSelectedItems![0]
+            let selectedArticle = articlesStorage.articles[selectedIndexPath.row]
+            articleVC.article = selectedArticle
+        }
     }
 }
