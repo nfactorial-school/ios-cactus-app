@@ -8,10 +8,6 @@
 
 import UIKit
 
-class LearnResponse: Decodable {
-    let articles1: [Article]
-}
-
 class LearnViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -160,7 +156,7 @@ class LearnViewController: UIViewController, UICollectionViewDataSource, UIColle
                 do {
                     let learnResponse = try JSONDecoder().decode(LearnResponse.self, from: data)
                     DispatchQueue.main.async {
-                        completion(learnResponse.articles1)
+                        completion(learnResponse.articles)
                     }
                 } catch let error {
                     DispatchQueue.main.async {
