@@ -956,18 +956,25 @@ Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit 
                                     <outlet property="delegate" destination="OAl-pl-1X9" id="wG4-p9-Epa"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-ik-Znl">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="secondaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="aUt-Ez-wen" firstAttribute="bottom" secondItem="q9W-Ng-dwJ" secondAttribute="bottom" id="0dT-hn-nLV"/>
+                            <constraint firstItem="bjL-ik-Znl" firstAttribute="centerY" secondItem="VxQ-W7-QVD" secondAttribute="centerY" id="I4w-QT-pRS"/>
                             <constraint firstItem="q9W-Ng-dwJ" firstAttribute="top" secondItem="aUt-Ez-wen" secondAttribute="top" id="bfR-tR-1TQ"/>
                             <constraint firstItem="q9W-Ng-dwJ" firstAttribute="leading" secondItem="aUt-Ez-wen" secondAttribute="leading" id="eRN-ym-bBO"/>
+                            <constraint firstItem="bjL-ik-Znl" firstAttribute="centerX" secondItem="VxQ-W7-QVD" secondAttribute="centerX" id="qvg-ZF-rEc"/>
                             <constraint firstItem="aUt-Ez-wen" firstAttribute="trailing" secondItem="q9W-Ng-dwJ" secondAttribute="trailing" id="sKs-Ba-YVt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aUt-Ez-wen"/>
                     </view>
                     <navigationItem key="navigationItem" id="2sT-b5-Xew"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="bjL-ik-Znl" id="nPb-Rb-cXJ"/>
                         <outlet property="collectionView" destination="q9W-Ng-dwJ" id="zXW-BQ-elA"/>
                         <segue destination="BhZ-60-ZC3" kind="show" identifier="showArticle" id="iui-jc-Tt7"/>
                     </connections>

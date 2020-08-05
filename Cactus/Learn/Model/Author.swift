@@ -8,7 +8,12 @@
 
 import Foundation
 
-class Author {
+//{
+//  "name": "Steven Grey",
+//  "subtitle": "Professor at the Wharton School",
+//  "image": "https://pbs.twimg.com/profile_images/1169919000123518978/37QQ8Una_400x400.jpg"
+//}
+class Author: Decodable {
     let name: String
     let subtitle: String
     

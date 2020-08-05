@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF08DFE724D891820008AB62 /* LeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFE624D891820008AB62 /* LeaderViewController.swift */; };
 		AF08DFE924D9096C0008AB62 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFE824D9096C0008AB62 /* ArticleViewController.swift */; };
 		AF08DFEB24D9180F0008AB62 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFEA24D9180F0008AB62 /* Author.swift */; };
-		AF08DFE724D891820008AB62 /* LeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFE624D891820008AB62 /* LeaderViewController.swift */; };
 		AF3D92C224D02F4100109169 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92C124D02F4100109169 /* BreakViewController.swift */; };
 		AF3D92CA24D128B100109169 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92C924D128B100109169 /* Session.swift */; };
 		AF3D92CC24D128EA00109169 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92CB24D128EA00109169 /* SessionManager.swift */; };
@@ -33,7 +33,6 @@
 		AF496A4324D7B8BF008DAF8C /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF496A4224D7B8BF008DAF8C /* LearnViewController.swift */; };
 		AF496A4624D7BC9F008DAF8C /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF496A4524D7BC9F008DAF8C /* ArticleCollectionViewCell.swift */; };
 		AF496A4924D7BF01008DAF8C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF496A4824D7BF01008DAF8C /* Article.swift */; };
-		AF496A4B24D7BF2A008DAF8C /* ArticlesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF496A4A24D7BF2A008DAF8C /* ArticlesStorage.swift */; };
 		AF5C1BC024D57D2300B30CF6 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C1BBF24D57D2300B30CF6 /* LeaderboardViewController.swift */; };
 		AF5C1BC224D57D3600B30CF6 /* Leader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C1BC124D57D3600B30CF6 /* Leader.swift */; };
 		AF5C1BC424D57D4500B30CF6 /* LeadersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C1BC324D57D4500B30CF6 /* LeadersStorage.swift */; };
@@ -41,9 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF08DFE624D891820008AB62 /* LeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderViewController.swift; sourceTree = "<group>"; };
 		AF08DFE824D9096C0008AB62 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		AF08DFEA24D9180F0008AB62 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
-		AF08DFE624D891820008AB62 /* LeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderViewController.swift; sourceTree = "<group>"; };
 		AF3D92C124D02F4100109169 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		AF3D92C924D128B100109169 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		AF3D92CB24D128EA00109169 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -69,7 +68,6 @@
 		AF496A4224D7B8BF008DAF8C /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		AF496A4524D7BC9F008DAF8C /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF496A4824D7BF01008DAF8C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		AF496A4A24D7BF2A008DAF8C /* ArticlesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesStorage.swift; sourceTree = "<group>"; };
 		AF5C1BBF24D57D2300B30CF6 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		AF5C1BC124D57D3600B30CF6 /* Leader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leader.swift; sourceTree = "<group>"; };
 		AF5C1BC324D57D4500B30CF6 /* LeadersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersStorage.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				AF496A4824D7BF01008DAF8C /* Article.swift */,
-				AF496A4A24D7BF2A008DAF8C /* ArticlesStorage.swift */,
 				AF08DFEA24D9180F0008AB62 /* Author.swift */,
 			);
 			path = Model;
@@ -423,7 +420,6 @@
 				AF3D92D524D18A3800109169 /* BreakManager.swift in Sources */,
 				AF496A4324D7B8BF008DAF8C /* LearnViewController.swift in Sources */,
 				AF3D933024D51D0F00109169 /* SessionsStorage.swift in Sources */,
-				AF496A4B24D7BF2A008DAF8C /* ArticlesStorage.swift in Sources */,
 				AF496A3B24D7369A008DAF8C /* Cactus.swift in Sources */,
 				AF3E08BA24CFD05C0018905C /* SessionViewController.swift in Sources */,
 				AF3E08CA24CFE72A0018905C /* OnboardingViewController.swift in Sources */,
