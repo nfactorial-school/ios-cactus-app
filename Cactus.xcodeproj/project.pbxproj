@@ -11,6 +11,8 @@
 		AF08DFE924D9096C0008AB62 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFE824D9096C0008AB62 /* ArticleViewController.swift */; };
 		AF08DFEB24D9180F0008AB62 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFEA24D9180F0008AB62 /* Author.swift */; };
 		AF08DFF224DAA63F0008AB62 /* LearnResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFF124DAA63F0008AB62 /* LearnResponse.swift */; };
+		AF08DFEE24DAA3FD0008AB62 /* LeaderStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFED24DAA3FD0008AB62 /* LeaderStatistics.swift */; };
+		AF08DFF024DAA5090008AB62 /* LeaderboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08DFEF24DAA5090008AB62 /* LeaderboardResponse.swift */; };
 		AF3D92C224D02F4100109169 /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92C124D02F4100109169 /* BreakViewController.swift */; };
 		AF3D92CA24D128B100109169 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92C924D128B100109169 /* Session.swift */; };
 		AF3D92CC24D128EA00109169 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D92CB24D128EA00109169 /* SessionManager.swift */; };
@@ -36,7 +38,6 @@
 		AF496A4924D7BF01008DAF8C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF496A4824D7BF01008DAF8C /* Article.swift */; };
 		AF5C1BC024D57D2300B30CF6 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C1BBF24D57D2300B30CF6 /* LeaderboardViewController.swift */; };
 		AF5C1BC224D57D3600B30CF6 /* Leader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C1BC124D57D3600B30CF6 /* Leader.swift */; };
-		AF5C1BC424D57D4500B30CF6 /* LeadersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C1BC324D57D4500B30CF6 /* LeadersStorage.swift */; };
 		AF5C1BC924D57E9700B30CF6 /* LeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5C1BC824D57E9700B30CF6 /* LeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		AF08DFE824D9096C0008AB62 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		AF08DFEA24D9180F0008AB62 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		AF08DFF124DAA63F0008AB62 /* LearnResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnResponse.swift; sourceTree = "<group>"; };
+		AF08DFED24DAA3FD0008AB62 /* LeaderStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderStatistics.swift; sourceTree = "<group>"; };
+		AF08DFEF24DAA5090008AB62 /* LeaderboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardResponse.swift; sourceTree = "<group>"; };
 		AF3D92C124D02F4100109169 /* BreakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
 		AF3D92C924D128B100109169 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		AF3D92CB24D128EA00109169 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -72,7 +75,6 @@
 		AF496A4824D7BF01008DAF8C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		AF5C1BBF24D57D2300B30CF6 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		AF5C1BC124D57D3600B30CF6 /* Leader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leader.swift; sourceTree = "<group>"; };
-		AF5C1BC324D57D4500B30CF6 /* LeadersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersStorage.swift; sourceTree = "<group>"; };
 		AF5C1BC824D57E9700B30CF6 /* LeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,8 +289,9 @@
 		AF5C1BC524D57E7300B30CF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AF5C1BC324D57D4500B30CF6 /* LeadersStorage.swift */,
 				AF5C1BC124D57D3600B30CF6 /* Leader.swift */,
+				AF08DFED24DAA3FD0008AB62 /* LeaderStatistics.swift */,
+				AF08DFEF24DAA5090008AB62 /* LeaderboardResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,13 +415,13 @@
 				AF3D92CC24D128EA00109169 /* SessionManager.swift in Sources */,
 				AF496A4924D7BF01008DAF8C /* Article.swift in Sources */,
 				AF496A3F24D736DD008DAF8C /* CactusCollectionViewCell.swift in Sources */,
-				AF5C1BC424D57D4500B30CF6 /* LeadersStorage.swift in Sources */,
 				AF3D92C224D02F4100109169 /* BreakViewController.swift in Sources */,
 				AF496A3924D7368D008DAF8C /* CactusShopViewController.swift in Sources */,
 				AF5C1BC224D57D3600B30CF6 /* Leader.swift in Sources */,
 				AF08DFF224DAA63F0008AB62 /* LearnResponse.swift in Sources */,
 				AF3D92D324D18A2900109169 /* Break.swift in Sources */,
 				AF3D932B24D5189E00109169 /* CactusTabBarController.swift in Sources */,
+				AF08DFEE24DAA3FD0008AB62 /* LeaderStatistics.swift in Sources */,
 				AF496A4624D7BC9F008DAF8C /* ArticleCollectionViewCell.swift in Sources */,
 				AF3D92CE24D1291100109169 /* CountdownTimer.swift in Sources */,
 				AF3D92D524D18A3800109169 /* BreakManager.swift in Sources */,
@@ -426,6 +429,7 @@
 				AF3D933024D51D0F00109169 /* SessionsStorage.swift in Sources */,
 				AF496A3B24D7369A008DAF8C /* Cactus.swift in Sources */,
 				AF3E08BA24CFD05C0018905C /* SessionViewController.swift in Sources */,
+				AF08DFF024DAA5090008AB62 /* LeaderboardResponse.swift in Sources */,
 				AF3E08CA24CFE72A0018905C /* OnboardingViewController.swift in Sources */,
 				AF3E08B624CFD05C0018905C /* AppDelegate.swift in Sources */,
 				AF5C1BC924D57E9700B30CF6 /* LeaderTableViewCell.swift in Sources */,

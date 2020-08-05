@@ -32,10 +32,10 @@ class LeaderViewController: UIViewController {
         totalFocusTimeContainerView.layer.cornerRadius = 16
         totalFocusTimeContainerView.layer.masksToBounds = true
         
-        daysWithCactusLabel.text = "\(leader.daysCount) days with Cactus"
+        daysWithCactusLabel.text = "\(leader.statistics.daysCount) days with Cactus"
         nameLabel.text = leader.name
-        cactusSessionsCountLabel.text = "\(leader.sessionsCount)"
-        totalFocusTimeLabel.text = "\(leader.totalFocusTimeInMinutes / 60)h \(leader.totalFocusTimeInMinutes % 60)m"
+        cactusSessionsCountLabel.text = "\(leader.statistics.sessionsCount)"
+        totalFocusTimeLabel.text = "\(leader.statistics.totalFocusTimeInMinutes / 60)h \(leader.statistics.totalFocusTimeInMinutes % 60)m"
         aboutLabel.text = leader.about
     }
 }

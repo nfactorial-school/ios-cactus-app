@@ -552,7 +552,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-lJ-ohE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-lJ-ohE">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -590,7 +590,6 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Kao-eD-ziA" secondAttribute="bottom" constant="16" id="0rz-Yj-5Lz"/>
                                                 <constraint firstItem="J5Z-aR-jkE" firstAttribute="leading" secondItem="Hho-kk-0rR" secondAttribute="leading" id="BXK-XS-NQ0"/>
                                                 <constraint firstItem="Hho-kk-0rR" firstAttribute="top" secondItem="Kao-eD-ziA" secondAttribute="top" id="IU2-SJ-YB9"/>
                                                 <constraint firstItem="Kao-eD-ziA" firstAttribute="top" secondItem="52o-ov-VBU" secondAttribute="top" constant="16" id="LUV-bB-xOY"/>
@@ -600,6 +599,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="J5Z-aR-jkE" secondAttribute="trailing" constant="16" id="pM0-ix-EHH"/>
                                                 <constraint firstItem="qnk-vj-lN1" firstAttribute="centerY" secondItem="Kao-eD-ziA" secondAttribute="centerY" id="sFf-YY-5Gl"/>
                                                 <constraint firstItem="J5Z-aR-jkE" firstAttribute="top" secondItem="Hho-kk-0rR" secondAttribute="bottom" constant="8" id="udX-yf-aFj"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kao-eD-ziA" secondAttribute="bottom" constant="16" id="xbo-VG-okX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -613,12 +613,19 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Viq-SR-OaO" id="IRQ-xi-dbm"/>
+                                    <outlet property="delegate" destination="Viq-SR-OaO" id="MyG-1z-RaN"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-Gq-u6V">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="secondaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="H0z-lJ-ohE" firstAttribute="top" secondItem="nC9-Zn-tqU" secondAttribute="top" id="9oy-6j-9Fp"/>
+                            <constraint firstItem="V6e-Gq-u6V" firstAttribute="centerY" secondItem="hMS-AT-htc" secondAttribute="centerY" id="FkA-29-dKM"/>
+                            <constraint firstItem="V6e-Gq-u6V" firstAttribute="centerX" secondItem="hMS-AT-htc" secondAttribute="centerX" id="MBH-vU-Kwd"/>
                             <constraint firstItem="H0z-lJ-ohE" firstAttribute="leading" secondItem="nC9-Zn-tqU" secondAttribute="leading" id="Qci-LO-XNv"/>
                             <constraint firstItem="nC9-Zn-tqU" firstAttribute="trailing" secondItem="H0z-lJ-ohE" secondAttribute="trailing" id="arr-ac-a6p"/>
                             <constraint firstItem="nC9-Zn-tqU" firstAttribute="bottom" secondItem="H0z-lJ-ohE" secondAttribute="bottom" id="tl6-it-joZ"/>
@@ -627,6 +634,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bap-RZ-MUM"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="V6e-Gq-u6V" id="3Zb-nC-fan"/>
                         <outlet property="tableView" destination="H0z-lJ-ohE" id="3GL-jz-ged"/>
                     </connections>
                 </viewController>

@@ -23,7 +23,7 @@ class LeaderTableViewCell: UITableViewCell {
     func configure(with leader: Leader, position: Int) {
         positionLabel.text = "\(position)"
         nameLabel.text = leader.name
-        hoursCountLabel.text = "\(leader.totalFocusTimeInMinutes / 60) hr."
+        hoursCountLabel.text = "\(leader.statistics.totalFocusTimeInMinutes / 60) hr."
         
         if position <= 3 {
             positionLabel.textColor = UIColor(named: "secondaryColor")
