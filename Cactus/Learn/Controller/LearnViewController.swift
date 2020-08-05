@@ -161,6 +161,7 @@ class LearnViewController: UIViewController, UICollectionViewDataSource, UIColle
                 } catch let error {
                     DispatchQueue.main.async {
                         self.showError(error)
+                        completion(nil)
                     }
                 }
                 
