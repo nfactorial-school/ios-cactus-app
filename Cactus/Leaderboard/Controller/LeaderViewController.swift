@@ -23,6 +23,9 @@ class LeaderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.layer.masksToBounds = true
 
         title = leader.name
         
@@ -37,5 +40,8 @@ class LeaderViewController: UIViewController {
         cactusSessionsCountLabel.text = "\(leader.statistics.sessionsCount)"
         totalFocusTimeLabel.text = "\(leader.statistics.totalFocusTimeInMinutes / 60)h \(leader.statistics.totalFocusTimeInMinutes % 60)m"
         aboutLabel.text = leader.about
+        
+        imageView.kf.indicatorType = .activity
+        imageView.kf.setImage(with: URL(string: leader.image))
     }
 }

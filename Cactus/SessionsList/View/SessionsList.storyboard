@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="51T-7i-NQC">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sessions List View Controller-->
+        <scene sceneID="3x0-5b-lZ4">
+            <objects>
+                <viewController id="vNv-FH-YdT" customClass="SessionsListViewController" customModule="Cactus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2yT-3v-xDy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="104" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CdV-1I-DqL">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="session_cell" rowHeight="104.33333587646484" id="aH7-th-jxN" customClass="SessionsListTableViewCell" customModule="Cactus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="104.33333587646484"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aH7-th-jxN" id="NhA-iy-Os6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104.33333587646484"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus_1" translatesAutoresizingMaskIntoConstraints="NO" id="y7j-m1-KwN">
+                                                    <rect key="frame" x="16" y="16" width="72" height="72.333333333333329"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="T4r-J7-h4D"/>
+                                                        <constraint firstAttribute="height" constant="72" id="lta-x7-VFI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Jul. 2020, 12:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3b-WP-mp1">
+                                                    <rect key="frame" x="104" y="16" width="122" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" name="grey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywR-iK-qkn">
+                                                    <rect key="frame" x="104" y="38" width="75" height="41"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                    <color key="textColor" name="darkGrey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y7j-m1-KwN" firstAttribute="leading" secondItem="NhA-iy-Os6" secondAttribute="leading" constant="16" id="4uz-fL-pSD"/>
+                                                <constraint firstAttribute="bottom" secondItem="y7j-m1-KwN" secondAttribute="bottom" constant="16" id="5UF-75-5rB"/>
+                                                <constraint firstItem="ywR-iK-qkn" firstAttribute="top" secondItem="X3b-WP-mp1" secondAttribute="bottom" constant="8" id="6Hi-z4-U4m"/>
+                                                <constraint firstItem="X3b-WP-mp1" firstAttribute="leading" secondItem="y7j-m1-KwN" secondAttribute="trailing" constant="16" id="8Te-Xn-hVQ"/>
+                                                <constraint firstItem="X3b-WP-mp1" firstAttribute="top" secondItem="y7j-m1-KwN" secondAttribute="top" id="OBm-cS-Fax"/>
+                                                <constraint firstItem="ywR-iK-qkn" firstAttribute="leading" secondItem="X3b-WP-mp1" secondAttribute="leading" id="Po7-xb-avM"/>
+                                                <constraint firstItem="y7j-m1-KwN" firstAttribute="top" secondItem="NhA-iy-Os6" secondAttribute="top" constant="16" id="rcj-vh-t0b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cactusImageView" destination="y7j-m1-KwN" id="ivR-7b-OFD"/>
+                                            <outlet property="durationLabel" destination="ywR-iK-qkn" id="gKu-eb-GK6"/>
+                                            <outlet property="startDateLabel" destination="X3b-WP-mp1" id="Tki-GH-NiM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vNv-FH-YdT" id="ZR8-Ye-fEY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Lx-iB-Pxj" firstAttribute="trailing" secondItem="CdV-1I-DqL" secondAttribute="trailing" id="EbZ-vU-z27"/>
+                            <constraint firstItem="2Lx-iB-Pxj" firstAttribute="bottom" secondItem="CdV-1I-DqL" secondAttribute="bottom" id="Mic-uc-h74"/>
+                            <constraint firstItem="CdV-1I-DqL" firstAttribute="top" secondItem="2Lx-iB-Pxj" secondAttribute="top" id="Vfo-M0-d6l"/>
+                            <constraint firstItem="CdV-1I-DqL" firstAttribute="leading" secondItem="2Lx-iB-Pxj" secondAttribute="leading" id="Xaa-xl-fUb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Lx-iB-Pxj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aph-5H-q7S"/>
+                    <connections>
+                        <outlet property="tableView" destination="CdV-1I-DqL" id="nTL-fD-G8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJ0-9V-80u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071.0144927536235" y="445.98214285714283"/>
+        </scene>
+        <!--Sessions-->
+        <scene sceneID="nOY-uz-pj1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="51T-7i-NQC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sessions" image="sessions_icon" id="Ix9-QK-maS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ycm-R9-1AI">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vNv-FH-YdT" kind="relationship" relationship="rootViewController" id="Pkt-qC-w3Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jx5-pm-vEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8695652173915" y="445.98214285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cactus_1" width="564" height="846"/>
+        <image name="sessions_icon" width="30" height="28"/>
+        <namedColor name="backgroundColor">
+            <color red="0.99199998378753662" green="0.96899998188018799" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGrey">
+            <color red="0.19200000166893005" green="0.17599999904632568" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

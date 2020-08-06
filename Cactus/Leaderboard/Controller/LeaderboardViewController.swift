@@ -40,7 +40,6 @@ class LeaderboardViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("willdisplay \(indexPath.row)")
         if indexPath.row == leaders.count - 2 {
             loadMore()
         }

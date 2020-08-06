@@ -18,12 +18,18 @@ class LeaderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         backgroundColor = .clear
+        
+        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        profileImageView.layer.masksToBounds = true
     }
     
     func configure(with leader: Leader, position: Int) {
         positionLabel.text = "\(position)"
         nameLabel.text = leader.name
         hoursCountLabel.text = "\(leader.statistics.totalFocusTimeInMinutes / 60) hr."
+        
+        profileImageView.kf.indicatorType = .activity
+        profileImageView.kf.setImage(with: URL(string: leader.image))
         
         if position <= 3 {
             positionLabel.textColor = UIColor(named: "secondaryColor")

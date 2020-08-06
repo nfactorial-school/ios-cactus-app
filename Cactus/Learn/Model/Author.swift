@@ -16,9 +16,5 @@ import Foundation
 class Author: Decodable {
     let name: String
     let subtitle: String
-    
-    init(name: String, subtitle: String) {
-        self.name = name
-        self.subtitle = subtitle
-    }
+    let image: String
 }

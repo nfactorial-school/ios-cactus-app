@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ArticleCollectionViewCell: UICollectionViewCell {
     @IBOutlet var cardView: UIView!
@@ -27,5 +28,8 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     func configure(with article: Article) {
         titleLabel.text = article.title
         subtitleLabel.text = article.subtitle
+        
+        thumbnailImageView.kf.indicatorType = .activity
+        thumbnailImageView.kf.setImage(with: URL(string: article.image))
     }
 }

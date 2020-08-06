@@ -24,15 +24,9 @@ import Foundation
 class Article: Decodable {
     let title: String
     let subtitle: String
+    let image: String
     let text: String
     let author: Author
-    
-    init(title: String, subtitle: String, text: String, author: Author) {
-        self.title = title
-        self.subtitle = subtitle
-        self.text = text
-        self.author = author
-    }
 }
 
 

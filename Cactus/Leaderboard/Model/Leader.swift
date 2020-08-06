@@ -11,5 +11,6 @@ import Foundation
 class Leader: Decodable {
     let name: String
     let about: String
+    let image: String
     let statistics: LeaderStatistics
 }

@@ -27,9 +27,6 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cactusImageView.layer.cornerRadius = cactusImageView.frame.width / 2
-        cactusImageView.layer.masksToBounds = true
-        
         plantButton.layer.cornerRadius = 14
         plantButton.layer.masksToBounds = true
         
@@ -42,6 +39,13 @@ class SessionViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         pickerView.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(didSelectCactus), name: NSNotification.Name(rawValue: "cactus_was_selected"), object: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        cactusImageView.layer.cornerRadius = cactusImageView.frame.width / 2
+        cactusImageView.layer.masksToBounds = true
     }
     
     @IBAction func didTapPlantButton() {
