@@ -8,16 +8,10 @@
 
 import Foundation
 
-class Session {
+struct Session {
     let durationInSeconds: Int
     let startDate: Date
     let cactus: Cactus
-    
-    init(durationInSeconds: Int, startDate: Date, cactus: Cactus) {
-        self.durationInSeconds = durationInSeconds
-        self.startDate = startDate
-        self.cactus = cactus
-    }
     
     var coinsCount: Int {
         if durationInSeconds <= 30 * 60 {

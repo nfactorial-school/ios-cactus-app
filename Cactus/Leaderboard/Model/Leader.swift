@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Leader: Decodable {
+struct Leader: Decodable {
     let name: String
     let about: String
     let image: String

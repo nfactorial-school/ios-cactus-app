@@ -8,6 +8,6 @@
 
 import Foundation
 
-class LearnResponse: Decodable {
+struct LearnResponse: Decodable {
     let articles: [Article]
 }

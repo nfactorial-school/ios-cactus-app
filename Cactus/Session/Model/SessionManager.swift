@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SessionManagerDelegate {
+protocol SessionManagerDelegate: AnyObject {
     func sessionDidStart(session: Session)
     func sessionTimeLeftChanged(session: Session, secondsLeft: Int)
     func sessionDidEnd(session: Session)
@@ -16,7 +16,7 @@ protocol SessionManagerDelegate {
 }
 
 class SessionManager {
-    let delegate: SessionManagerDelegate
+    weak var delegate: SessionManagerDelegate?
     
     var sessionTimer: CountdownTimer?
     
@@ -25,22 +25,22 @@ class SessionManager {
     }
     
     func startSession(session: Session) {
-        sessionTimer = CountdownTimer(durationInSeconds: session.durationInSeconds) { secondsLeft in
+        sessionTimer = CountdownTimer(durationInSeconds: session.durationInSeconds) { [weak self] secondsLeft in
             if secondsLeft == 0 {
                 SessionsStorage.shared.addSession(session)
 //                Balance.shared.addCoins(session.coinsCount)
-                self.delegate.sessionDidEnd(session: session)
+                self?.delegate?.sessionDidEnd(session: session)
             } else {
-                self.delegate.sessionTimeLeftChanged(session: session, secondsLeft: secondsLeft)
+                self?.delegate?.sessionTimeLeftChanged(session: session, secondsLeft: secondsLeft)
             }
         }
         
         sessionTimer?.start()
-        delegate.sessionDidStart(session: session)
+        delegate?.sessionDidStart(session: session)
     }
     
     func stopSession() {
         sessionTimer?.stop()
-        delegate.sessionDidCancel()
+        delegate?.sessionDidCancel()
     }
 }

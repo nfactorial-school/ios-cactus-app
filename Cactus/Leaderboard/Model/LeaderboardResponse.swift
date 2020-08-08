@@ -8,6 +8,6 @@
 
 import Foundation
 
-class LeaderboardResponse: Decodable {
+struct LeaderboardResponse: Decodable {
     let users: [Leader]
 }

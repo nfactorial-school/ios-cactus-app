@@ -21,7 +21,7 @@ import Foundation
 //  }
 //}
 
-class Article: Decodable {
+struct Article: Decodable {
     let title: String
     let subtitle: String
     let image: String

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BreakManagerDelegate {
+protocol BreakManagerDelegate: AnyObject {
     func breakDidStart(aBreak: Break)
     func breakTimeLeftChanged(secondsLeft: Int)
     func breakDidEnd(aBreak: Break)
@@ -16,7 +16,7 @@ protocol BreakManagerDelegate {
 }
 
 class BreakManager {
-    let delegate: BreakManagerDelegate
+    weak var delegate: BreakManagerDelegate?
     
     var breakTimer: CountdownTimer?
     
@@ -25,20 +25,20 @@ class BreakManager {
     }
     
     func startBreak(aBreak: Break) {
-        breakTimer = CountdownTimer(durationInSeconds: aBreak.durationInSeconds) { secondsLeft in
+        breakTimer = CountdownTimer(durationInSeconds: aBreak.durationInSeconds) { [weak self] secondsLeft in
             if secondsLeft == 0 {
-                self.delegate.breakDidEnd(aBreak: aBreak)
+                self?.delegate?.breakDidEnd(aBreak: aBreak)
             } else {
-                self.delegate.breakTimeLeftChanged(secondsLeft: secondsLeft)
+                self?.delegate?.breakTimeLeftChanged(secondsLeft: secondsLeft)
             }
         }
         
         breakTimer?.start()
-        delegate.breakDidStart(aBreak: aBreak)
+        delegate?.breakDidStart(aBreak: aBreak)
     }
     
     func cancelBreak() {
         breakTimer?.stop()
-        delegate.breakDidCancel()
+        delegate?.breakDidCancel()
     }
 }

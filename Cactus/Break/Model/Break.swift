@@ -8,10 +8,6 @@
 
 import Foundation
 
-class Break {
+struct Break {
     let durationInSeconds: Int
-    
-    init(durationInSeconds: Int) {
-        self.durationInSeconds = durationInSeconds
-    }
 }

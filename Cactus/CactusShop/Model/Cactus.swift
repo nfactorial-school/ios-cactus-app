@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Cactus {
+struct Cactus {
     let imageName: String
     
     init(imageName: String) {

@@ -149,7 +149,9 @@ class LearnViewController: UIViewController, UICollectionViewDataSource, UIColle
         dataTask?.cancel()
         
         let url = URL(string: "https://ios-cactus-app.herokuapp.com/learn?offset=\(offset)&limit=10")!
-        dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        dataTask = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            guard let self = self else { return }
+            
             self.dataTask = nil
             
             if let data = data {

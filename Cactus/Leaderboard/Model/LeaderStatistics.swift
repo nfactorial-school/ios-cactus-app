@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeaderStatistics: Decodable {
+struct LeaderStatistics: Decodable {
     let daysCount: Int
     let sessionsCount: Int
     let totalFocusTimeInMinutes: Int
